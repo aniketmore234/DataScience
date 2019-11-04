@@ -1,0 +1,1 @@
+lr: 0.00001 momentum: 0.5 num_hidden: 3 sizes: 300,400,300 activation: relu loss: ce opt: adam batch_size: 250 epochs: 20 anneal: true
