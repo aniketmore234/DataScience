@@ -1,3 +1,9 @@
+def K_u_v( U, V, kernel, kernel_param = 1 ):
+  if ( kernel == 'linear' ):
+      return( np.matmul( U, V.T ) )
+  elif( kernel == 'poly' ):
+      return( ( 1 + np.matmul( U, V.T ) )**int( kernel_param ) )
+
 class RandomForest():
     def fit(self, x, y, n_trees, n_features, sample_sz, depth=5, min_leaf=5, kernel='poly',kernel_param=1):
         np.random.seed(12)
